@@ -78,7 +78,7 @@ const sendMsg = (msg, match) => {
         msgToSend = checkHistory(randomMsg());
         setTimeout(() => {
             bot.sendMessage( msg.chat.id, msgToSend);
-        }, 1000);
+        }, Math.random()*4000);
     }
     lastMsgs[0] = msgToSend;
     for(var i = 0, total = msgs.length - 1; i < total; i++){
